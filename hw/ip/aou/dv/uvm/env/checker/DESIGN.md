@@ -747,7 +747,9 @@ checker tolerates the receiving die's advertisements (`r_late_adv`, one flop
 per die): they are neither reported nor funded -- the die they are for is
 DISABLED and holds no credits (8.4) -- until the flit carrying that die's next
 Activation message, which closes the window with the flit since the message is
-first in it (4.4), or an FDI reset.
+first in it (4.4), or an FDI reset. Nor are they judged against `CRD_CAPACITY`:
+that rule guards the shadow counter's tracking (see "Capacity" below), and an
+advertisement that funds nothing leaves nothing untracked.
 
 That is the strictest rule that never reports legal traffic, and its limits are
 what the observation point cannot know:

@@ -9,8 +9,9 @@
 // their own DeactivateReq (late_adv_hold), so it races the peer's final
 // DeactivateAck. The link has 20 cycles of flight time, about five flits, so
 // the race is not decided by a single cycle. Two rounds: A deactivates, so B's
-// late credits cross A's final Ack on the PL stream; then B deactivates, so
-// A's cross B's on LP. Neither AOU_FDI_CHECKER nor the receiving model may
+// late credits cross A's final DeactivateAck on the PL stream; then B
+// deactivates, so A's late credits cross B's final DeactivateAck on the LP
+// stream. Neither AOU_FDI_CHECKER nor the receiving model may
 // report them, the checker must have seen some each way, and the next
 // activation must start from the fresh advertisement alone: a receiver that
 // counted late credits would overrun its peer there (AOU-R16,
