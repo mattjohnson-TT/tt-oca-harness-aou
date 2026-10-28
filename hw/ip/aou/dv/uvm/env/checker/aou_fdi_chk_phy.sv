@@ -91,5 +91,6 @@ module aou_fdi_chk_phy #(
       .dir_flit_seq (chk.dir_flit_seq)
   );
 
-  assign chk.rst_n = rst_n;
+  assign chk.rst_n    = rst_n;
+  assign chk.late_adv = u_fdi_chk.w_late_adv_seen;
 endmodule

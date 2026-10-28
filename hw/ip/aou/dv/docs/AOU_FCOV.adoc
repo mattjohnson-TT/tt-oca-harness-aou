@@ -80,7 +80,10 @@ or a cross exclusion by pattern (`XIGN`, `XILL`). The notable definitions:
   starts at with its size and whether it spans a flit, over the DUT-like,
   sparse, minimum- and maximum-density packer policies of the remote die.
 * `cg_credit.x_ev_cls_dir` crosses the credit event (grant, return, zero
-  stall, saturation, injected overflow) with the credit class and direction.
+  stall, saturation, injected overflow, and `late_adv`: request credit the
+  remote die sent while the DUT's final DeactivateAck may already have been
+  on its way, so that it can reach a DUT already DISABLED) with the credit
+  class and direction.
 * `txn_cg` has no burst coverpoint: the DUT supports INCR only and `AXI-R19`
   flags any other burst as a stimulus error.
 * `cg_mo.full` and `cg_early_tbl`'s fill bins record that a limit was reached

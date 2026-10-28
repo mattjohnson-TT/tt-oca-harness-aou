@@ -629,6 +629,7 @@ module tb_top;
       fdi_chk.xchk_violation      = fdi_chk_p1.xchk_violation;
       fdi_chk.dir_violation       = fdi_chk_p1.dir_violation;
       fdi_chk.dir_flit_seq        = fdi_chk_p1.dir_flit_seq;
+      fdi_chk.late_adv            = fdi_chk_p1.late_adv;
     end else begin
       fdi_chk.violation           = fdi_chk_p0.violation;
       fdi_chk.trigger             = fdi_chk_p0.trigger;
@@ -645,6 +646,7 @@ module tb_top;
       fdi_chk.xchk_violation      = fdi_chk_p0.xchk_violation;
       fdi_chk.dir_violation       = fdi_chk_p0.dir_violation;
       fdi_chk.dir_flit_seq        = fdi_chk_p0.dir_flit_seq;
+      fdi_chk.late_adv            = fdi_chk_p0.late_adv;
     end
   end
 `endif
