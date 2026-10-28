@@ -167,8 +167,6 @@ this table so `fc_report` can report coverage per plan item is an open item
   `cov/config/vcs/cov_fsm_reset.filter`.
 * The `v0.8` bins (`cg_act_op` four-granule ActivateReq, the ERROR state,
   `cg_flit_occ` half-flit Misc limit) need an AoU v0.8 DUT or partner.
-* `AOU_FDI_CHECKER` is not instantiated on the two-PHY configurations; the
-  FDI groups there come from the L1 monitor alone.
 * Verilator scores covergroups as zero; its code coverage (line, branch,
   expression, toggle) is reported by module (`summary.txt`, lcov
   `merged.info`), and the functional numbers come from the service on every

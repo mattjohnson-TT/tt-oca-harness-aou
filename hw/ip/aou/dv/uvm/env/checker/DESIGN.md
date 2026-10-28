@@ -297,9 +297,9 @@ the other's findings, not about who may clear them.
 
 A checker that silently mis-parses a configuration it was not written for is
 worse than none, so each of these is a compile error: `FDI_IF_BYTES` in
-{32, 64, 128} and `TWO_PHY` undefined (the two-PHY split is not supported; the
-three widths give 8, 4 and 2 beats, so a 128B half is always whole beats and
-needs no guard of its own); `RP_COUNT` 1..4 and `FDID` 0..3 (both two-bit fields on
+{32, 64, 128} (the three widths give 8, 4 and 2 beats, so a 128B half is always
+whole beats and needs no guard of its own; a two-PHY bench instantiates one
+checker per PHY, at that PHY's width); `RP_COUNT` 1..4 and `FDID` 0..3 (both two-bit fields on
 the wire); positive counter widths; `CRD_CAPACITY` at least 1; `CHK_PROFILE` a
 posture the package names (an unknown one would otherwise fall through to the
 full set and elaborate more than was asked); every enable 0 or 1 ("2" would

@@ -199,10 +199,6 @@ if ((FDI_IF_BYTES != 32) && (FDI_IF_BYTES != 64) &&
     $fatal(1, "AOU_FDI_CHECKER: unsupported FDI_IF_BYTES=%0d (32, 64 or 128)", FDI_IF_BYTES);
 end
 
-`ifdef TWO_PHY
-$fatal(1, "AOU_FDI_CHECKER: TWO_PHY is not supported (observes one single-PHY link)");
-`endif
-
 if ((RP_COUNT < 1) || (RP_COUNT > 4)) begin : gen_rp_count_out_of_range
     $fatal(1, "AOU_FDI_CHECKER: RP_COUNT=%0d; the protocol's plane field is two bits, so 1..4",
            RP_COUNT);
